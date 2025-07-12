@@ -8,7 +8,7 @@ class GraphGenerator:
         existing_graph = {}
         # Regex to find lines like "video_url --> related_video_url"
         # It captures the source and target URLs
-        pattern = re.compile(r'"(https://developer.apple.com/videos/play/wwdc[0-9]{4}/[0-9]+/?)" --> "(https://developer.apple.com/videos/play/wwdc[0-9]{4}/[0-9]+/?)"')
+        pattern = re.compile(r'"(https://developer.apple.com/videos/play/wwdc[0-9]{4}/[0-9]+/?)" --> "(https://developer.apple.com/videos/play/wwdc[0-9]{4}/[0-9]+/?)|";')
         
         for line in markdown_content.splitlines():
             match = pattern.search(line)
@@ -31,10 +31,10 @@ class GraphGenerator:
                 if related_video_url not in combined_graph[video_url]:
                     combined_graph[video_url].append(related_video_url)
 
-        mermaid_output = "graph TD\n"
+        mermaid_output = "graph TD;\n"
         for video_url, related_videos in combined_graph.items():
             for related_video_url in related_videos:
-                mermaid_output += f"    \"{video_url}\" --> \"{related_video_url}\"\n"
+                mermaid_output += f"    \"{video_url}\" --> \"{related_video_url}\";\n"
         return mermaid_output
 
 if __name__ == "__main__":
@@ -58,10 +58,10 @@ if __name__ == "__main__":
 
     # Test parsing existing markdown
     existing_markdown = """
-graph TD
-    "https://developer.apple.com/videos/play/wwdc2025/100/" --> "https://developer.apple.com/videos/play/wwdc2025/101/"
-    "https://developer.apple.com/videos/play/wwdc2025/100/" --> "https://developer.apple.com/videos/play/wwdc2025/102/"
-    "https://developer.apple.com/videos/play/wwdc2025/101/" --> "https://developer.apple.com/videos/play/wwdc2025/103/"
+graph TD;
+    "https://developer.apple.com/videos/play/wwdc2025/100/" --> "https://developer.apple.com/videos/play/wwdc2025/101/";
+    "https://developer.apple.com/videos/play/wwdc2025/100/" --> "https://developer.apple.com/videos/play/wwdc2025/102/";
+    "https://developer.apple.com/videos/play/wwdc2025/101/" --> "https://developer.apple.com/videos/play/wwdc2025/103/";
     """
     parsed_graph = generator.parse_mermaid_markdown(existing_markdown)
     print("\nParsed Existing Graph:", parsed_graph)
