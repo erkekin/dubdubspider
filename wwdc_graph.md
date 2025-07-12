@@ -231,3 +231,5 @@ graph TD
     "https://developer.apple.com/videos/play/wwdc2023/10041" --> "https://developer.apple.com/videos/play/wwdc2023/10039"
     "https://developer.apple.com/videos/play/wwdc2023/10121" --> "https://developer.apple.com/videos/play/wwdc2023/10122"
     "https://developer.apple.com/videos/play/wwdc2023/10121" --> "https://developer.apple.com/videos/play/wwdc2023/10120"
+    "https://developer.apple.com/videos/play/wwdc2020/10641/" --> "https://developer.apple.com/videos/play/wwdc2023/10105"
+    "https://developer.apple.com/videos/play/wwdc2023/10105" --> "https://developer.apple.com/videos/play/wwdc2020/10641"
