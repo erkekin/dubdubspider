@@ -1,4 +1,11 @@
 graph TD
+    "https://developer.apple.com/videos/play/wwdc2025/301" --> "https://developer.apple.com/videos/play/wwdc2025/259"
+    "https://developer.apple.com/videos/play/wwdc2025/301" --> "https://developer.apple.com/videos/play/wwdc2025/360"
+    "https://developer.apple.com/videos/play/wwdc2025/301" --> "https://developer.apple.com/videos/play/wwdc2025/286"
+    "https://developer.apple.com/videos/play/wwdc2025/259" --> "https://developer.apple.com/videos/play/wwdc2025/360"
+    "https://developer.apple.com/videos/play/wwdc2025/259" --> "https://developer.apple.com/videos/play/wwdc2025/248"
+    "https://developer.apple.com/videos/play/wwdc2025/259" --> "https://developer.apple.com/videos/play/wwdc2025/286"
+    "https://developer.apple.com/videos/play/wwdc2025/286" --> "https://developer.apple.com/videos/play/wwdc2025/248"
     "https://developer.apple.com/videos/play/wwdc2021/10022" --> "https://developer.apple.com/videos/play/wwdc2023/10160"
     "https://developer.apple.com/videos/play/wwdc2023/10160" --> "https://developer.apple.com/videos/play/wwdc2023/10248"
     "https://developer.apple.com/videos/play/wwdc2023/10160" --> "https://developer.apple.com/videos/play/wwdc2023/10149"
@@ -231,5 +238,3 @@ graph TD
     "https://developer.apple.com/videos/play/wwdc2023/10041" --> "https://developer.apple.com/videos/play/wwdc2023/10039"
     "https://developer.apple.com/videos/play/wwdc2023/10121" --> "https://developer.apple.com/videos/play/wwdc2023/10122"
     "https://developer.apple.com/videos/play/wwdc2023/10121" --> "https://developer.apple.com/videos/play/wwdc2023/10120"
-    "https://developer.apple.com/videos/play/wwdc2020/10641/" --> "https://developer.apple.com/videos/play/wwdc2023/10105"
-    "https://developer.apple.com/videos/play/wwdc2023/10105" --> "https://developer.apple.com/videos/play/wwdc2020/10641"
