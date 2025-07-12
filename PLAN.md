@@ -13,7 +13,7 @@ This document outlines the plan for creating a Python application that spiders W
 ## 2. Web Spider Implementation (`spider.py`)
 
 - **Core Logic:** A `spider.py` file will contain the main web scraping logic.
-- **Starting Point:** The spider will begin with a single WWDC 2025 video URL.
+- **Starting Point:** The spider will begin with a list of WWDC video URLs read from `initial_links.md`.
 - **URL Management:**
     - `urls_to_visit`: A queue or list to hold the URLs of video pages to be scraped.
     - `visited_urls`: A set to store the URLs of pages that have already been scraped to prevent redundant processing and infinite loops.
@@ -46,10 +46,9 @@ This document outlines the plan for creating a Python application that spiders W
 
 - **Orchestration:** A `main.py` script will serve as the entry point and coordinate the overall process.
 - **Execution Flow:**
-    1. It will accept the initial WWDC 2025 video URL as a command-line argument or from a configuration file.
-    2. It will instantiate and run the spider to gather the video relationship data.
+    1. It will read initial WWDC video URLs from `initial_links.md`.
+    2. It will instantiate and run the spider for each URL to gather the video relationship data.
     3. It will then pass the collected data to the graph generator to produce the final `wwdc_graph.md` file.
-    4. It will then jump to the first related video link and repeat the process. 
-    5. A success message will be printed to the console upon completion.
+    4. A success message will be printed to the console upon completion.
 
 This plan provides a structured approach to developing the WWDC video graph spider, separating concerns into distinct modules for clarity and maintainability.

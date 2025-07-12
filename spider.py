@@ -57,14 +57,3 @@ class WWDCSpider:
                     if video_url not in self.visited_urls and video_url not in self.urls_to_visit:
                         self.urls_to_visit.append(video_url)
 
-if __name__ == "__main__":
-    # This is a placeholder URL. Replace with an actual WWDC 2025 video URL for testing.
-    # You'll need to inspect a WWDC video page to find the correct selectors for related videos.
-    start_url = "https://developer.apple.com/videos/play/wwdc2025/301/" # Example WWDC 2025 URL
-    spider = WWDCSpider()
-    spider.crawl(start_url)
-    print("\n--- Crawling Complete ---")
-    print("Video Graph:")
-    for video, related in spider.video_graph.items():
-        print(f"{video} -> {related}")
-    print(f"Total visited URLs: {len(spider.visited_urls)}")
