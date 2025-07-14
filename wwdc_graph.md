@@ -1,4 +1,4 @@
-graph TD;
+
     "https://developer.apple.com/videos/play/wwdc2015/719/" --> "https://developer.apple.com/videos/play/wwdc2021/10239";
     "https://developer.apple.com/videos/play/wwdc2021/10239" --> "https://developer.apple.com/videos/play/wwdc2022/10078";
     "https://developer.apple.com/videos/play/wwdc2022/10078" --> "https://developer.apple.com/videos/play/wwdc2023/10004";
